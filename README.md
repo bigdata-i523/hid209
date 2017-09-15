@@ -19,14 +19,12 @@ owner:
 ```
 paper1:
    author: 
-   - Gregor von Laszewski
-   - Fugang Wang
+   - Han, Wenxuan
    hid:
-   - 000
-   - 001
-   title: This is my paper about xyz
-   abstract: This paper showcases tis and that and the other
-   url: https://github.com/bigdata-i523/sample-hid000/paper1/paper1.pdf
+   - 209
+   title: Big Data Application in Web Search and Text Mining
+   abstract: To understand data analytic steps in web search, and analyze some of popular approaches/algorithms (e.g. Hubs, PageRank, etc) within big data and their application in web search aspect.
+   url: https://github.com/bigdata-i523/hid209/paper1/paper1.pdf
    type: latex
    status: in progress
 ```
