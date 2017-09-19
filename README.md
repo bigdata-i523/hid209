@@ -2,8 +2,8 @@
 
 # Comments
 
-* Mind the ```quotes and do not forget them```
-* Remove all sections that you have not yet created a directory in github with so our automated scripts do not fail. Only add them if the 
+* Mind the ```quotes and do not forget them```. Please do not delete the quotes, and keep the #
+* Remove all sections that you have not yet worked on.
 
 # Owner
 
