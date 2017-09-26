@@ -15,3 +15,17 @@
 
 * 08/26/17 Installed and Learned aquamacs
 * 00/01/17 Installed and Learned jabref
+
+# Meetings
+
+* 08/25/17 Attended class meeting for residential students
+* 09/01/17 Attended class meeting for residential students
+* 09/08/17 Attended class meeting for residential students
+* 09/15/17 Attended class meeting for residential students
+* 09/22/17 Attended class meeting for residential students
+
+# Location
+
+* Address: Bloomington IN, 1150 S Clarizz Blvd
+* Latitude: 39.151663
+* Longitude: -86.491093
