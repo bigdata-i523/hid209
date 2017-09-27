@@ -6,4 +6,6 @@ Hid: 209
 
 Type: Latex
 
-Status: in progress
+Detail status:
+* finished abstract
+* working on introduction and first section
