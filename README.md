@@ -18,10 +18,14 @@ paper1:
    hid:
    - 209
    title: Big Data Application in Web Search and Text Mining
-   abstract: To understand data analytic steps in web search, and analyze some of popular approaches/algorithms (e.g. Hubs, PageRank, etc) within big data and their application in web search aspect.
+   abstract: >
+      To understand data analytic steps in web search, and analyze
+      some of popular approaches/algorithms (e.g. Hubs, PageRank, etc)
+      within big data and their application in web search aspect. 
    url: https://github.com/bigdata-i523/hid209/paper1/paper1.pdf
    type: latex
    status: in progress
+   chapter: Media
 ```
    
 # Paper 2
