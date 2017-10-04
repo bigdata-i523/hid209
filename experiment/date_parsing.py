@@ -1,8 +1,8 @@
-import yaml
-import sys
-from pprint import pprint
-import glob
 import errno
+import glob
+
+import dateparser
+import yaml
 
 # all variables/counters declaration
 path = 'notebook*.md'  # find all notebook files in the current directory
@@ -36,7 +36,7 @@ counter = 0
 
 
 # convert the input data format
-def convert_format(input_lines):
+def convert_data(input_lines):
     output_lines = []
     for new_line in input_lines:
         new_line = new_line.replace("*", "-")
@@ -51,13 +51,22 @@ def convert_format(input_lines):
 def split_str(title, input_line):
     # if there exist a range of time
     if input_line[11:12] == "-":
-        dict[title]["Date"].append(input_line[2:21])  # include two dates
-        dict[title]["Content"].append(input_line[22:(len(input_line) - 1)].replace("\n", ""))
+        date1 = dateparser.parse(input_line[2:10]).strftime("%y%m%d")
+        date2 = dateparser.parse(input_line[13:21]).strftime("%y%m%d")
+        period = date1 + date2
+        dict[title]["Date"].append(period)  # include two dates, which is a period
+
+        content = input_line[22:(len(input_line) - 1)].replace("\n", "")
+        dict[title]["Content"].append(content)
 
     # no range of time, just a single date
     else:
-        dict[title]["Date"].append(input_line[2:10])  # each date has 8 characters
-        dict[title]["Content"].append(input_line[11:(len(input_line) - 1)].replace("\n", ""))
+        cur_date = dateparser.parse(input_line[2:10]).strftime(
+            "%y%m%d")  # for a single date, there are at most 8 characters
+        dict[title]["Date"].append(cur_date)
+
+        content = input_line[11:(len(input_line) - 1)].replace("\n", "")
+        dict[title]["Content"].append(content)
 
 
 def clear_lists(titles):
@@ -74,7 +83,7 @@ if __name__ == '__main__':
             # read notebook*.md files
             with open(my_file, "r") as f:
                 read_lines = f.readlines()
-                converted_lines = convert_format(read_lines)
+                converted_lines = convert_data(read_lines)
                 # print(converted_lines)
 
                 # Loop through all the lines
@@ -132,7 +141,7 @@ if __name__ == '__main__':
                         find_writing = False
                         find_meetings = False
 
-                # print(dict)
+                print(dict)
                 # print(dict["Logistic"])
                 # print(dict["Theory"])
                 # print(dict["Practice"])
