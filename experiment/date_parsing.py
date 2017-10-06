@@ -28,7 +28,13 @@ def extract_data(read_lines):
     counter = 0
     flag = None
 
-    # initialize a dictionary (table)
+    # initialize a dictionary (table) structure, which is
+    # {
+    #   "Section": {
+    #           "Date": [],
+    #           "Content": []
+    #       }
+    # }
     dict = {}
     for i in section_list:
         dict[i] = {}
@@ -112,9 +118,11 @@ def split_str(row, content):
 
 
 def check_sections(name, sections):
-    missed_sections = set(section_list) - set(sections)
+    # transfer list to set then use the reduce operation
+    missed_sections = list(set(section_list) - set(sections))
     if missed_sections:
-        print(name + " misses such sections:")
+        print(name + " misses following sections:")
+
         for i in missed_sections:
             print(i)
     else:
@@ -122,9 +130,9 @@ def check_sections(name, sections):
 
 
 def check_attend(name, meetings):
-    missed_meetings = set(meeting_list) - set(meetings)
+    missed_meetings = list(set(meeting_list) - set(meetings))
     if missed_meetings:
-        print(name + " misses such meetings:")
+        print(name + " misses following meetings:")
         for i in missed_meetings:
             print(i)
     else:
@@ -159,16 +167,13 @@ def display_all_info(dictionary):
 
 
 if __name__ == '__main__':
-    result = {}
-
     # all variables/counters declaration
-    path = 'notebook*.md'  # find all notebook files in the current directory
+    path = "notebook*.md"  # find all notebook files (begin with notebook) in the current directory
     files = glob.glob(path)
-    file_number = 1
 
-    # global variables
-    section_list = ["Logistic", "Theory", "Practice", "Writing", "Meetings"]  # this is for complete notebook file
-    meeting_list = ['170825', '170901', '170908', '170915', '170922']  # all meetings that student need to attend
+    # define global variables
+    section_list = ["Logistic", "Theory", "Practice", "Writing", "Meetings"]  # this is for a completely notebook file
+    meeting_list = ["170825", "170901", "170908", "170915", "170922"]  # all meetings that a student need to attend
 
     for my_file in files:
         try:
@@ -180,22 +185,20 @@ if __name__ == '__main__':
                 (converted_lines, my_sections) = convert_data(read_lines)
                 # print(converted_lines)
 
-                result = extract_data(converted_lines)
+                raw_result = extract_data(converted_lines)
 
-                # display_all_info(result)
+                # display_all_info(raw_result)
 
                 section_name = "Meetings"
-                display_section_date(result, section_name)
+                display_section_date(raw_result, section_name)
 
                 check_sections(my_file, my_sections)
-                check_attend(my_file, result["Meetings"]["Date"])
+                check_attend(my_file, raw_result["Meetings"]["Date"])
 
                 # define the output file name (yaml file), correspond to input file name
-                out_str = 'data_parsing_' + my_file + '.yaml'
+                out_str = "data_parsing_" + my_file + ".yaml"
                 print("\n---------------------------------" + out_str + " data---------------------------------")
-                output_data(result, out_str)
-
-            file_number = file_number + 1
+                output_data(raw_result, out_str)
 
         except IOError as exc:
             if exc.errno != errno.EISDIR:
