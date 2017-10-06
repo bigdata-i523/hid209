@@ -3,7 +3,7 @@
 This program used to read notebook.md files, extract date information from them and write to yaml files.
 It also has the ability to check whether there is a missing section and whether a student has missed any residential class.
 
-# How to use the script
+# How to run the program
 
 ```
 Make sure that all notebook.md files are in the same directory with this script, 
@@ -30,7 +30,7 @@ output_data: write data into yaml files.
 # Test results
 
 ```
-Input files: notebook1.md, notebook2.md.
+Test files: notebook1.md, notebook2.md.
 
 Output results:
 notebook1.md
@@ -48,8 +48,9 @@ notebook2.md
 notebook2.md does not miss any section.
 notebook2.md does not miss any meeting.
 
-Explanation: this script shows the input file name, output date from a sample section (use "Meetings"), check sections and attendance.
-In this sample, we could find that notebook1.md has missed the "Writing" section and absence meetings at "09/15/17" and "09/22/17".
+Explanation: this script shows the input file name, output date from a sample section (use "Meetings"), 
+check sections and attendance. In this sample, we could find that notebook1.md has missed the "Writing" 
+section and absence meetings at "09/15/17" and "09/22/17".
 ```
 
 # Data in yaml files
