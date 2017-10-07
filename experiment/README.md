@@ -14,7 +14,7 @@ by the above command.
 
 3. After replace the "date_parsing.py" with our script, run "pip install ." to install this command.
 
-4. Run "cms" to enter the cloudmesh panel.
+4. Make sure you are in "cloudmesh.date_parsing" directory and then run "cms" to enter the cloudmesh panel.
 
 5. Run "date_parsing -g" or "date_parsing generate" command to get the results and yaml files.
 
