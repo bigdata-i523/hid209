@@ -9,12 +9,11 @@ residential class.
 ```
 1. Run "cms sys command generate date_parsing" to generate a command ("date_parsing" is our command name).
 
-2. Make sure all notebook*.md files are in "cloudmesh.date_parsing" directory which has just generated 
-by the above command.
+2. Create an arbitrary folder (e.g. "sample" folder) and put all notebook*.md files in it.
 
 3. After replace the "date_parsing.py" with our script, run "pip install ." to install this command.
 
-4. Make sure you are in "cloudmesh.date_parsing" directory and then run "cms" to enter the cloudmesh panel.
+4. Run "cms" command in the directory with all notebook.md files (sample folder) to enter the cloudmesh panel.
 
 5. Run "date_parsing -g" or "date_parsing generate" command to get the results and yaml files.
 
