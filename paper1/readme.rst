@@ -6,4 +6,4 @@ Hid: 209
 
 Type: Latex
 
-Status: Finished (100%)
+Status: Completed (100%)

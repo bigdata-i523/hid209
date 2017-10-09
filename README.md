@@ -24,7 +24,7 @@ paper1:
       within big data and their application in web search aspect. 
    url: https://github.com/bigdata-i523/hid209/paper1/paper1.pdf
    type: latex
-   status: Finished (100%)
+   status: Completed (100%)
    chapter: Media
 ```
    
