@@ -6,6 +6,4 @@ Hid: 209
 
 Type: Latex
 
-Detail status:
-* finished abstract
-* working on introduction and first section
+Status: 90%
