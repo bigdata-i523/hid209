@@ -31,7 +31,7 @@
 
 
 \begin{abstract}
-Because of the rapid development of social media, there are gigantic amount of data generated in every second on the web. And those data could be stored in any forms like text, videos, images or their combinations. The more complicated forms of data, the more space it will take up and will cost more time to read it. Although most of today's personal computers have a very high performance, it is extremely difficult to process and analyze useful text information from those huge amount of unstructured data by using traditional single computer methods without the help of big data tools or text mining techniques. Fortunately, the improvements in big data application are also increasing fast in order to support those difficult works on web search and text mining. This paper first study the knowledge of web search technique and its data analytic steps, then introduce the link structure with a broad analysis of some web page structures (Hubs and PageRank), and at last, discuss their applications in this field of big data.
+Because of the rapid development of social media, there are gigantic amount of data generated in every second on the web. And those data could be stored in any forms like text, videos, images or their combinations. The more complicated forms of data, the more space it will take up and will cost more time to read it. Although most of today's personal computers have a very high performance, it is extremely difficult to process and analyze useful text information from those huge amount of unstructured data by using traditional single computer methods without the help of big data tools or text mining techniques. Fortunately, the improvements in big data application are also increasing fast in order to support those difficult works on web search and text mining. This paper first studies the knowledge of web search technique and its data analytic steps, then introduces the link structure with a broad analysis of some web page structures (Hubs and PageRank), and at last, discusses their applications in this field of big data.
 \end{abstract}
 
 \keywords{I523, HID209, Big Data, Social Media, Web Search, Text Mining, PageRank, Hubs}
@@ -54,6 +54,7 @@ Text mining (also known as knowledge discovery in text database \cite{editor04})
 \section{Web Search Technique}
 
 \subsection{Key Fundamental Principles}
+
 DIKW hierarchical model is the most basic model in the information management, information systems and knowledge management disciplines. Thus, it also used behind web search technique. It contains four main components: data, information, knowledge and wisdom. Since this paper only considers this model in web search area, these four components have the following conception.
 \begin{itemize}
 \item Data: raw web pages or ``documents viewed as a bag of words''.
@@ -62,14 +63,15 @@ DIKW hierarchical model is the most basic model in the information management, i
 \item Wisdom: synthesis of many such actions by a set of users.
 \end{itemize}
 
-The following fighure shows the hierarchical framework of DIKW model. It shows a pyramid contructure with wisdom in the top level and data in the bottom level.
+Fighure 1 shows the hierarchical framework of DIKW model. It shows a pyramid contructure with wisdom in the top level and data in the bottom level.
 \begin{figure}
 \includegraphics[width=0.30\columnwidth]{images/DIKW_Pyramid}
 \caption{DIKW hierarchical model \cite{editor06}.}
 \end{figure}
 
 \subsection{Search Engines}
-A web search engine is a software system for searching information on the Internet. The search results are generally presented in a line which are often referred to as search engine results pages. And some search engines also haeve the capability to mine data from databases or other open directories. Unlike web directories, which are maintained only by human editors, search engines also maintain web crawling, indexing and searching processes in real-time \cite{editor05}. The following table displays the development of search engines and some searching technologies in recent years.
+
+A web search engine is a software system for searching information on the Internet. The search results are generally presented in a line which are often referred to as search engine results pages. And some search engines also haeve the capability to mine data from databases or other open directories. Unlike web directories, which are maintained only by human editors, search engines also maintain web crawling, indexing and searching processes in real-time \cite{editor05}. Table 1 displays the development of search engines and some searching technologies in recent years.
 \begin{table}
 \centering
 \begin{tabular}{|c|c|} \hline
@@ -85,6 +87,7 @@ A web search engine is a software system for searching information on the Intern
 \end{table}
 
 \subsection{Boolean and Vector Space Models}
+
 After discussed the basic principles and the application of web search, here introduce a model that used to define the search technique. Boolean model and vector model are both retrieval model that can be a description of either the computational process or the human process of retrieval. For a retrieval model, it specifies the details of \cite{editor07}: 
 \begin{itemize}
 \item Document representation.
@@ -108,7 +111,8 @@ There are some patterns to represent term weight. One is the Term Frequency, whi
 While $t$ refers to terms, and $d$ refers to documents. This model straightforward to map everything to a vector and compare their angles. But it is hard to find a good set of basis vectors, a good weighting scheme for terms and a comparison function.
 
 \subsection{Web Crawling}
-It is not difficult to extract data from web with the help of algorithms. The input of the algorithm could be a list of URL’s visited already and a list of new URL’s to visit. Then executes the following steps in a loop:
+
+It is not difficult to extract data from web with the help of algorithms. The input of the algorithm could be a list of URL's visited already and a list of new URL's to visit. Then executes the following steps in a loop:
 \begin{enumerate}
 \item Fetch URL off list and check if done.
 \item If not done, go to web and continue collect.
@@ -132,7 +136,7 @@ For the big data which people search from web, it could be very difficult to ext
 \item Preprocess data into searchable data like words or positions.
 \item Form Inverted Index in order to map words to documents.
 \item Use algorithm like PageRank to rank relevance of documents.
-\item Apply some technologies (e.g. reverse engineering, preventing reverse engineering, etc) for web advertising.
+\item Apply some technologies (e.g. reverse engineering, preventing reverse engineering, etc.) for web advertising.
 \item Build the structure of the Internet and its people and pages.
 \item Clustering documents into topics.
 \item Might utilize Bayes to convert Mathematics of frequency into Mathematics of belief.
@@ -143,14 +147,14 @@ Since link structure has the significant impact to Search Engine Rankings, the P
 
 Link structure explores the connectivity patterns between web pages that contain the useful information and makes the huge of website’s statistics meaningful. That is to say, mining these big data could help us understand what kind of things that users looking for, what are the hottest categories of a website and which pages are the most popular. Continuous optimization of link structure can eliminate duplicate content and promote popular pages in order to get more pageviews and higher rankings on Search Engine results \cite{editor08}.
 
-An idea of the link structure for web pages is Hubs, which is known as Hubs and Authorities. The concept of this idea is simple: certain web pages served as large directories that were not actually authoritative in the information for users, but have links that led users direct to other authoritative pages \cite{editor09}. The following graph shows the structure of Hubs.
+An idea of the link structure for web pages is Hubs, which is known as Hubs and Authorities. The concept of this idea is simple: certain web pages served as large directories that were not actually authoritative in the information for users, but have links that led users direct to other authoritative pages \cite{editor09}. Figure 2 shows the structure of Hubs.
 \begin{figure}
 \includegraphics[width=0.30\columnwidth]{images/Hubs_structure}
-\caption{Hubs structure for web pages}
+\caption{Hubs structure for web pages.}
 \end{figure}
 As it shows in this figure, a good hub represented a page that pointed to many other pages and a good authority represented a page that was linked by many different hubs.
 
-After defined the link structure of web pages, here introduce a link analysis algorithm named PageRank used by Google Search to rank websites in their search engine results. It is a way of measuring the importance of website pages. PageRank assigns a numerical weighting to each element of a hyperlinked set of documents with the purpose of ``measuring'' its relative importance within the set. The numerical weight that it assigns to any given element $E$ is referred to as the PageRank of $E$ and denoted by $PR(E)$ \cite{editor10}. The output of PageRank is a probability distribution that a page will be visited by a person who has the same probability to click each link on this page. This probability could be calculated iteratively with each page getting a contribution at each iteration equal to its page rank divided by the sum of links on page:
+After defined the link structure of web pages, it comes to a link analysis algorithm named PageRank used by Google Search to rank websites in their search engine results. It is a way of measuring the importance of website pages. PageRank assigns a numerical weighting to each element of a hyperlinked set of documents with the purpose of ``measuring'' its relative importance within the set. The numerical weight that it assigns to any given element $E$ is referred to as the PageRank of $E$ and denoted by $PR(E)$ \cite{editor10}. The output of PageRank is a probability distribution that a page will be visited by a person who has the same probability to click each link on this page. This probability could be calculated iteratively with each page getting a contribution at each iteration equal to its page rank divided by the sum of links on page:
 \[PR(\text{page } i)=\Sigma_{\text{page } j \text{ pointing at } i}\dfrac{PR(\text{page } j)}{\text{number of pages linked on page } j}\]
 For example, a PageRank of 0.5 means there is a 50\% chance that a person clicking on a random link will be directed to the document with the 0.5 PageRank \cite{editor10}. PageRank could be used in ranking academic doctoral programs, recommendation systems and many other searching areas.
     
@@ -163,13 +167,16 @@ After obtained results through a search query, it is important to classify them 
 \item K-Nearest Neighbors.
 \end{itemize}
 
-Alternatively, some “hidden meaning” can be determined with a topic model. It used to discover the abstract "topics" that occur in a collection of documents so that people could group documents by those topics. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body \cite{editor11}. Assume each document is a set of topics and each topic is a bag of words, a topic model aims to find the best set of topics and best set of words in topics through a mathematical framework. That is to say, it allows people to examine a set of documents and discover what the topics might be and what each document's balance of topics is \cite{editor11}.
+Alternatively, some ``hidden meaning'' can be determined with a topic model. It used to discover the abstract "topics" that occur in a collection of documents so that people could group documents by those topics. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body \cite{editor11}. Assume each document is a set of topics and each topic is a bag of words, a topic model aims to find the best set of topics and best set of words in topics through a mathematical framework. That is to say, it allows people to examine a set of documents and discover what the topics might be and what each document's balance of topics is \cite{editor11}.
 
 \section{Conclusion}
 
+The aim of this paper is to demonstrate the core contents and the technique background of web search and text mining in big data area. Since the growth amount of data generate on web everyday cause the traditional computing methods and algorithms inefficiency, it is essential to make innovations in web search aspect. In the recent twenty years, search engines developed quickly and DIKW model, which was known as a popular model used in information system before, has applied in web for building its basic principles as well. As the vector space model appeared, the simple boolean model has been replaced in order to define the search query model more completely. And with the help of web crawling algorithm, multiple types of text data extracted from website have become normalized before mining (analysis) the useful information.
+
+Since webs page could seem as link structure, there must exists some patterns between linked pages. PageRank which found by Google is still widely applied in many different big data systems today, it has the ability to find the most relevant page for the content that the user searches for. After obtained pages of data information, we could utilize clustering to group documents together by topics.
 
 \begin{acks}
-The author would like to thank Professor Gregor von Laszewski and TAs for providing the opportunity to study the topic in detail and for providing all the tutorials and other material to write the paper.
+The author would like to thank Professor Gregor von Laszewski and all TAs for providing the resource, tutorials and other related materials to write this paper.
 
 \end{acks}
 
