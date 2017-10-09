@@ -23,6 +23,7 @@
 * 09/08/17 Attended class meeting for residential students
 * 09/15/17 Attended class meeting for residential students
 * 09/22/17 Attended class meeting for residential students
+* 09/29/17 Attended class meeting for residential students
 
 # Location
 
