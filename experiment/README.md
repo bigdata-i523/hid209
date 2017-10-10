@@ -7,15 +7,17 @@ residential class.
 # How to run the program
 
 ```
-1. Run "cms sys command generate date_parsing" to generate a command ("date_parsing" is our command name).
+1. Run "cms sys command generate mycommand01" to generate a command ("mycommand01" is our command name).
 
-2. Create an arbitrary folder (e.g. "sample" folder) and put all notebook*.md files in it.
+2. You could create an arbitrary folder (e.g. "sample" folder) and put all notebook*.md files in it.
 
-3. After replace the "date_parsing.py" with our script, run "pip install ." to install this command.
+3. Replace "mycommand01.py" with our script, add "date_parsing.py" script and api, then run "pip install ." command to install it.
 
-4. Run "cms" command in the directory with all notebook.md files (sample folder) to enter the cloudmesh panel.
+4. Run "cms" command to enter the cloudmesh panel.
 
-5. Run "date_parsing -g" or "date_parsing generate" command to get the results and yaml files.
+5. Run "mycommand01 -g DIR" command to get results and yaml files for all notebook.md files in a directory ("DIR" is a directory, e.g. "/sample/").
+
+6. Run "mycommand01 -f FILE" command to get result and yaml file for a single notebook.md file ("FILE" is a file path, e.g. "/sample/notebook.md").
 
 For detail install steps see: https://cloudmesh.github.io/classes/lesson/prg/python-cmd5.html.
 ```
