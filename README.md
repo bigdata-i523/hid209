@@ -36,8 +36,8 @@ paper2:
    - Han, Wenxuan
    hid:
    - 209
-   title: This is my paper about the other abc
-   abstract: This paper showcases tis and that and the other in regards to abc
+   title: Clustering Algorithms in Big Data Analysis
+   abstract: This paper will focus on clustering algorithms which developed as a powerful tool for big data analysis. It will introduce the main clustering types and analyze some highly used algorithms.
    url: https://github.com/bigdata-i523/hid209/paper2/paper2.pdf
    type: latex
    status: in progress
