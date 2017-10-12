@@ -108,8 +108,8 @@ class DateParsing:
             period = date1 + date2
             row["Date"].append(period)  # include two dates, which is a period
 
-            content = content[22:(len(content) - 1)].replace("\n", "")
-            row["Content"].append(content)
+            new_content = content[22:(len(content) - 1)].replace("\n", "")
+            row["Content"].append(new_content)
 
         # no range of time, just a single date
         else:
@@ -117,8 +117,8 @@ class DateParsing:
                 "%y%m%d")  # for a single date, there are at most 8 characters
             row["Date"].append(cur_date)
 
-            content = content[11:(len(content) - 1)].replace("\n", "")
-            row["Content"].append(content)
+            new_content = content[11:(len(content) - 1)].replace("\n", "")
+            row["Content"].append(new_content)
 
     def check_sections(self, name, sections):
         # transfer list to set then use the reduce operation
