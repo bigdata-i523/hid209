@@ -18,12 +18,16 @@ paper1:
     type: latex
     url: https://github.com/bigdata-i523/hid209/paper1/paper1.pdf
 paper2:
-    abstract: This paper showcases tis and that and the other
+    abstract: >
+        This paper will focus on clustering algorithms which developed as a
+        powerful tool for big data analysis. It will introduce the main clustering
+        types and analyze some highly used algorithms.
     author:
-        - Gregor von Laszewski
+        - Han, Wenxuan
+    chapter: None
     hid:
-        - 0
-    status: not start yet
-    title: Benchmarking a BigData Docker deployment
+        - 209
+    status: 0%
+    title: Clustering Algorithms in Big Data Analysis
     type: latex
-    url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
+    url: https://github.com/bigdata-i523/hid209/paper2/paper2.pdf
