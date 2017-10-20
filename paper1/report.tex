@@ -9,7 +9,7 @@
 \author{Wenxuan Han}
 % \orcid{1234-5678-9012}
 \affiliation{%
-  \institution{Indiana University Bloomingtonn}
+  \institution{Indiana University Bloomington}
   \streetaddress{1150 S Clarizz Blvd}
   \city{Bloomington} 
   \state{Indiana} 
@@ -46,7 +46,7 @@ Text mining (also known as knowledge discovery in text database \cite{editor04})
 
 \subsection{Key Fundamental Principles}
 
-DIKW hierarchical model is the most basic model in the information management, information systems and knowledge management disciplines. Thus, it also used behind web search technique. It contains four main components: data, information, knowledge and wisdom. Since this paper only considers this model in web search area, these four components have the following conception.
+Data, information, knowledge, and wisdom (DIKW) hierarchical model is the most basic model in the information management, information systems and knowledge management disciplines. Thus, it also used behind web search technique. It contains four main components as shown in its name: data, information, knowledge and wisdom. Since this paper only considers this model in web search area, these four components have the following conception.
 \begin{itemize}
 \item Data: raw web pages or ``documents viewed as a bag of words''.
 \item Information: result of query or ``documents viewed as a collection of insights''.
@@ -54,7 +54,7 @@ DIKW hierarchical model is the most basic model in the information management, i
 \item Wisdom: synthesis of many such actions by a set of users.
 \end{itemize}
 
-Fighure 1 shows the hierarchical framework of DIKW model. It shows a pyramid contructure with wisdom in the top level and data in the bottom level.
+Figure 1 shows the hierarchical framework of DIKW model. It shows a pyramid structure with wisdom in the top level and data in the bottom level.
 \begin{figure}
 \includegraphics[width=0.30\columnwidth]{images/DIKW_Pyramid}
 \caption{DIKW hierarchical model \cite{editor06}.}
@@ -107,7 +107,7 @@ It is not difficult to extract data from web with the help of algorithms. The in
 \begin{enumerate}
 \item Fetch URL off list and check if done.
 \item If not done, go to web and continue collect.
-\item Hand document to document analyser.
+\item Hand document to document analyzer.
 \item Extract all URL's and add to list of new URL's to visit.
 \end{enumerate}
 The result could be lots of detail of course. Then after fetching from the web, it should do the following steps:
@@ -115,12 +115,12 @@ The result could be lots of detail of course. Then after fetching from the web, 
 \item Convert document from HTML, PDF, Word, $\ldots$ to a text document.
 \item Tokenization: remove formatting, punctuation, capitals and convert to common form which makes document become a set of canonical tokens.
 \item Filtration: remove ``stop words'' (e.g. the, is, a, etc.).
-\item Stemming and Normalization: remove inflections and cope with non trival synonyms.
+\item Stemming and Normalization: remove inflections and cope with non trivial synonyms.
 \end{enumerate}
 Then the output are contents in bag of words and final terms are those used to define each dimension of vector space model.
 
 \section{Web Data (Text) Mining}
-\subsection{Web Data Analytics Steps}
+\subsection{Web Data Analysis Steps}
 For the big data which people search from web, it could be very difficult to extract or analyze useful information behind them. Thus, it is necessary to define the following steps to make those data structured or orderly so that people could easily applying other techniques like text mining to analyze them.
 \begin{enumerate}
 \item Get the digital data from web.
@@ -150,7 +150,7 @@ After defined the link structure of web pages, it comes to a link analysis algor
 For example, a PageRank of 0.5 means there is a 50\% chance that a person clicking on a random link will be directed to the document with the 0.5 PageRank \cite{editor10}. PageRank could be used in ranking academic doctoral programs, recommendation systems and many other searching areas.
     
 \subsection{Clustering and Topic Models}
-After obtained results through a search query, it is important to classify them by groups for the further analysis. Clustering, also known as grouping ducument together, is the responses to a search query which give a group of documents. Suppose documents are the points in a space, the task of clustering is to identify regions. There are several ways to do this task:
+After obtained results through a search query, it is important to classify them by groups for the further analysis. Clustering, also known as grouping document together, is the responses to a search query which give a group of documents. Suppose documents are the points in a space, the task of clustering is to identify regions. There are several ways to do this task:
 \begin{itemize}
 \item Clustering: Nearby regions of points.
 \item Support Vector Machine (SVM): Chop space up into parts.
@@ -173,5 +173,6 @@ The author would like to thank Professor Gregor von Laszewski and all TAs for pr
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
+
 
 \end{document}
