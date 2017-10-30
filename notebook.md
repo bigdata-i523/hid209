@@ -25,7 +25,7 @@
 # Theory
 
 * 08/22/17 - 08/23/17 Read and watched all videso in the Theory Introduction section
-* 09/08/17 – 09/12/17 Read and watched all videos in the Overview of Data Science section
+* 09/08/17 - 09/12/17 Read and watched all videos in the Overview of Data Science section
 * 10/01/17 - 10/07/17 Read and watched all videos in the Web Search and Text Mining section
 
 # Practice
