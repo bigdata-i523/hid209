@@ -41,7 +41,6 @@
 * 09/08/17 Read the section on Communication Research
 * 09/09/17 Learned basic skills of Latex and configured its environment on Ubuntu
 * 09/10/17 Learned basic skills of Bibliography Management by using JabRef
-* 09/23/17 Done the research on Paper 1 and collected some resources
 
 # Location
 
