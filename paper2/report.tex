@@ -39,22 +39,41 @@ Today, human's progress on Internet, Internet of Things (IoT) and other computin
 
 Clustering of big data has gained popularity in the last decade due to increased demand to process of large data sets \cite{bcab}. Data clustering algorithms were developed as a meta-learning tool to analyze massive data accurately. Its main purpose is to find similarities between all objects in a given data set and categorize them into groups by specific metrics which means that clustering is a process to manage similar objects in a same group. And since the data set processed by a clustering algorithm is unlabeled, data clustering has also considered as an unsupervised learning technique \cite{dcaa}.
 
-Because of the large amounts of data produced by many applications from different sources in today's world, the demand of efficiency clustering algorithms is increasing. However, it is difficult to create a perfect algorithm which has the capacity to satisfy requirement of all situations. Thus, depend on the purposes of clustering and the given data set, people should utilize the corresponding clustering approach \cite{bcab}. Here are the main types of clustering (algorithms) for common use:
+Because of the large amounts of data produced by many applications from different sources in today's world, the demand of efficiency clustering algorithms is increasing. However, it is difficult to create a perfect algorithm which has the capacity to satisfy requirement of all situations. Thus, depend on the purposes of clustering and the given data set, people should utilize the corresponding clustering approach \cite{bcab}. Here are the main types of clustering (algorithms) which commonly used:
 \begin{itemize}
-\item Exclusive or partition-based clustering;
+\item Exclusive or partitioning-based clustering;
 \item Hierarchical clustering;
 \item Density-based clustering;
 \item Grid-based clustering;
 \item Model-based clustering.
 \end{itemize}
-In the rest of this paper we will discuss these cluster types as well as some of their applications.
+In the rest of this paper we will discuss these cluster types as well as some of the applications.
 
 \section{Clustering Types}
-\begin{enumerate}
-\item Partition clustering \\
-aaa
-\item Density-based clustering
-\end{enumerate}
+In this section, we will see the main par of clustering types. Each clustering has its only purpose to solve the spe problem.
+\subsection{Exclusive or Partitioning-based Clustering}
+
+Partitioning is a kind of technique which used to decompose the set of data objects into several non-overlapping partitions (each partition represents a cluster) such that each data object is in exactly one partition.
+
+Given a set of $N$ data points, a partitioning method usually start with a random partitioning and refine it iteratively to find a partition of $K$ ($K \leq N$) clusters that optimizes the chosen partitioning criterion. While classifying data points into $K$ groups, it must satisfy two rules: one point must be present in each cluster and one cluster must have one set \cite{dcar}. One of the most famous and commonly used partitioning techniques is k-means.
+
+\subsection{Hierarchical-based Clustering}
+
+Hierarchical clustering groups a big scale of data set by creating a cluster tree or dendrogram. The tree is not a single set of clusters, but rather a multilevel hierarchy, where closeness clusters at one level of leaf nodes are joined as new clusters that compose to nodes at the next level \cite{math}. Generally, there are two approaches applied in hierarchical clustering which are agglomerative method (top-down approach) and divisive method (bottom-up approach).
+
+For agglomerative method, it starts in two or more clusters recursively merged as the most applicable cluster by moving up the hierarchy. However, for divisive method, it starts in a single cluster and recursively split to find applicable cluster for the items by moving down the hierarchy \cite{dcar}. Although the time complexity for both approaches are huge ($O(n^2\log(n))$ for agglomerative and $O(2^n)$ for divisive) which makes them execute too slow during the big data sets, it is possible to choose optimal agglomerative methods such as SLINK for single-linkage and CLINK for complete-linkage clustering to reduce the complexity to $O(n^2)$. BIRCH, CURE, ROCK and Chameleon are some typical algorithms that applied under hierarchical-based clustering.
+
+\subsection{Density-based Clustering}
+
+\section{Clustering Algorithms}
+
+Here in this section introduces two kinds of well-known and commonly used clustering algorithms: k-means algorithm which applied partitioning-based clustering and CLIQUE algorithm which applied grid-based clustering.
+
+\subsection{K-means Algorithm}
+\subsection{CLIQUE}
+
+\section{Comparson between clustering types}
+
 \section{Conclusion}
 
 
