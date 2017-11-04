@@ -65,14 +65,40 @@ For agglomerative method, it starts in two or more clusters recursively merged a
 
 \subsection{Density-based Clustering}
 
+Density-based clustering identifies distinctive clusters in the data based on the basic idea that a cluster in a data space is a contiguous region of high point density separated by regions of lower object density \cite{jsdbc} and defined as a maximal set of density connected points. It has the capability to learned clusters with arbitrary shape. Techniques such as DBSCAN, OPTICS, DBCLASD and DENCLUE are used to sifter out outliers and determine clusters of arbitrary shape \cite{dcar}.
+
+$\varepsilon-Neighborhood$ which means objects within a radius of $\varepsilon$ from an object could define the density. It has the following form.
+\[N_{\varepsilon}(p):\{q \vert d(p,q)\leq \varepsilon\}\]
+Where $q$ is the neighborhood of cluster $p$. A ``high density'' neighborhood of an object contains at least MinPts (a specified number of points) of objects. If a point has more than MinPts objects within $\varepsilon$, it is a core point. If a point has fewer than MinPts objects within $\varepsilon$ but in the neighborhood of a core point, it is a border point. A noise point is neither a core point nor a border point.
+
+\subsection{Grid-based Clustering}
+
+As the name of this clustering technique, it separates data objects in the data sets into different grids. Unlike other clustering methods that concerned with the data points, grid clustering focused on the value space that surrounds the data points. In general, a typical grid-based clustering algorithm has the following five steps:
+\begin{itemize}
+\item[1] Creating the grid structure. For example, partitioning the data space into a finite number of cells.
+\item[2] Calculating the cell density for each cell.
+\item[3] Sorting the cells by their densities.
+\item[4] Identifying centers of a cluster.
+\item[5] Traversal of neighbor cells.
+\end{itemize}
+
+Grid-based clustering has the similar time complexity to other clustering methods. However, it could significant reduce the statistical value calculation complexity even though for clustering very big data sets. Some typical examples of this clustering are the Wave-Cluster and STING \cite{dcar}.
+
+\subsection{Model-based Clustering}
+
+Model-based clustering was developed based on probability models from the data. For example, the finite mixture model for probability densities. To find the parameter insider the probability model, it uses maximum likelihood estimation (MLE). In the model-based clustering approach, the data comes from a distribution that is a mixture of two or more components. Each component is described by a density function and has an associated probability in the mixture. Let assume the components adopt $p-variate$ normal distributions. Then the probability model for clustering will often be a mixture of multivariate normal distributions and each component in the mixture will represent a cluster. Nowadays, there are many good techniques that could be used in model-based clustering such as expectation-maximization (EM) algorithm, conceptual clustering and neural network approaches.
+
+\subsection{Comparson}
+
 \section{Clustering Algorithms}
 
 Here in this section introduces two kinds of well-known and commonly used clustering algorithms: k-means algorithm which applied partitioning-based clustering and CLIQUE algorithm which applied grid-based clustering.
 
 \subsection{K-means Algorithm}
-\subsection{CLIQUE}
 
-\section{Comparson between clustering types}
+
+
+\subsection{CLIQUE}
 
 \section{Conclusion}
 

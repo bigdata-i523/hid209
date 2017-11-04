@@ -27,7 +27,7 @@ paper2:
     chapter: None
     hid:
         - 209
-    status: 30%
+    status: 60%
     title: Clustering Algorithms in Big Data Analysis
     type: latex
     url: https://github.com/bigdata-i523/hid209/paper2/paper2.pdf
