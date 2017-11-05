@@ -18,6 +18,7 @@ paper1:
     type: latex
     url: https://github.com/bigdata-i523/hid209/paper1/paper1.pdf
 paper2:
+    review: Nov 6 2017
     abstract: >
         This paper will focus on clustering algorithms which developed as a
         powerful tool for big data analysis. It will introduce the main clustering
