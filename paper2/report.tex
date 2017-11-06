@@ -23,7 +23,7 @@
 
 
 \begin{abstract}
-Data Mining is a kind of popular method which intent to extract and analyze useful information from data. However, the rapid development of computing technologies has caused the size of data sets become extremely large. Because of the high complexity of these data sets, traditional data mining approaches or algorithms are not appropriate to be used. Therefore, it is very important to discover similarities of data and use them to divide data into different groups. Nowadays, clustering algorithms have emerged as a powerful meta-learning tool which provide the goal to categorize data into clusters such that objects are grouped in the same cluster are similar according to specific properties like traits or behaviors. In this paper, we have introduced several types of clustering technologies in data mining with some most commonly used algorithms, and compare advantages and disadvantages between them during the large data sets environment.
+Data Mining is a kind of popular method which intent to extract and analyze useful information from data. However, the rapid development of computing technologies has caused the size of data sets become extremely large. Because of the high complexity of these data sets, traditional data mining approaches or algorithms are not appropriate to be used. Therefore, it is very important to discover similarities of data and use them to divide data into different groups. Nowadays, clustering algorithms have emerged as a powerful meta-learning tool which provides the goal to categorize data into clusters such that objects are grouped in the same cluster are similar according to specific properties like traits or behaviors. In this paper, we have introduced several types of clustering technologies in data mining with some most commonly used algorithms, and compare advantages and disadvantages between them during the large data sets environment.
 \end{abstract}
 
 \keywords{I523, HID209, Big Data, Clustering Algorithms, K-Means, CLIQUE}
@@ -35,11 +35,11 @@ Data Mining is a kind of popular method which intent to extract and analyze usef
 
 \section{Introduction}
 
-Today, human's progress on Internet, Internet of Things (IoT) and other computing technologies lead to the growth of many related applications. Due to the usage of these applications in daily life, there are huge amount of data generated every second which let the concept of big data emerged. Since these data may reveal hidden information which is interesting and important for people to study, the management of big data plays a significant role. We viewed technologies which used to extracting meaningful and required information or to find out unseen relationship between the data as Data Mining \cite{dcar}, and clustering is the one of the core tasks for processing data.
+Today, human's progress on Internet, Internet of Things (IoT) and other computing technologies lead to the growth of many related applications. Due to the usage of these applications in daily life, there are a huge amount of data generated every second which let the concept of big data emerged. Since these data may reveal hidden information which is interesting and important for people to study, the management of big data plays a significant role. We viewed technologies which used to extracting meaningful and required information or to find out the unseen relationship between the data as Data Mining \cite{dcar}, and clustering is one of the core tasks for processing data.
 
-Clustering of big data has gained popularity in the last decade due to increased demand to process of large data sets \cite{bcab}. Data clustering algorithms were developed as a meta-learning tool to analyze massive data accurately. Its main purpose is to find similarities between all objects in a given data set and categorize them into groups by specific metrics which means that clustering is a process to manage similar objects in a same group. And since the data set processed by a clustering algorithm is unlabeled, data clustering has also considered as an unsupervised learning technique \cite{dcaa}.
+Clustering of big data has gained popularity in the last decade due to increased demand for a process of large data sets \cite{bcab}. Data clustering algorithms were developed as a meta-learning tool to analyze massive data accurately. Its main purpose is to find similarities between all objects in a given data set and categorize them into groups by specific metrics which means that clustering is a process to manage similar objects in the same group. And since the data set processed by a clustering algorithm is unlabeled, data clustering has also considered as an unsupervised learning technique \cite{dcaa}.
 
-Because of the large amounts of data produced from different sources in today's world, the demand of efficiency clustering algorithms is increasing. However, it is difficult to create a perfect algorithm which has the capability to satisfy requirement of all situations. Thus, depend on the purposes of clustering and the given data set, people should utilize the corresponding clustering approach \cite{bcab}. Here are the main types of clustering (algorithms) which commonly used:
+Because of the large amounts of data produced from different sources in today's world, the demand of efficiency clustering algorithms is increasing. However, it is difficult to create a perfect algorithm which has the capability to satisfy the requirement of all situations. Thus, depending on the purposes of clustering and the given data set, people should utilize the corresponding clustering approach \cite{bcab}. Here are the main types of clustering (algorithms) which commonly used:
 \begin{itemize}
 \item Exclusive or partitioning-based clustering;
 \item Hierarchical clustering;
@@ -55,17 +55,17 @@ Since each clustering approach has its own idea for solving the specific problem
 
 Partitioning is a kind of technique which used to decompose the set of data objects into several non-overlapping partitions (each partition represents a cluster) such that each data object is in exactly one partition.
 
-Given a set of $n$ data points, a partitioning method usually start with a random partitioning and refine it iteratively to find a partition of $k$ ($k \leq n$) clusters that optimizes the chosen partitioning criterion. While classifying data points into $k$ groups, it must satisfy two rules: one point must be present in each cluster and one cluster must have one set \cite{dcar}. One of the most famous and commonly used partitioning techniques is k-means.
+Given a set of $n$ data points, a partitioning method usually starts with a random partitioning and refine it iteratively to find a partition of $k$ ($k \leq n$) clusters that optimizes the chosen partitioning criterion. While classifying data points into $k$ groups, it must satisfy two rules: one point must be present in each cluster and one cluster must have one set \cite{dcar}. One of the most famous and commonly used partitioning techniques is k-means.
 
 \subsection{Hierarchical-based Clustering}
 
-Hierarchical clustering groups a big scale of data set by creating a cluster tree or dendrogram. The tree is not a single set of clusters, but rather a multilevel hierarchy, where closeness clusters at one level of leaf nodes are joined as new clusters that compose to nodes at the next level \cite{math}. Generally, there are two approaches applied in hierarchical clustering which are agglomerative method (top-down approach) and divisive method (bottom-up approach).
+Hierarchical clustering groups a big scale of data set by creating a cluster tree or dendrogram. The tree is not a single set of clusters, but rather a multilevel hierarchy, where closeness clusters at one level of leaf nodes are joined as new clusters that compose to nodes at the next level \cite{math}. Generally, there are two approaches applied in hierarchical clustering which is the agglomerative method (top-down approach) and divisive method (bottom-up approach).
 
-For agglomerative method, it starts in two or more clusters recursively merged as the most applicable cluster by moving up the hierarchy. However, for divisive method, it starts in a single cluster and recursively split to find applicable cluster for the items by moving down the hierarchy \cite{dcar}. Although the time complexity for both approaches are huge ($O(n^2\log(n))$ for agglomerative and $O(2^n)$ for divisive) which makes them execute too slow during the big data sets, it is possible to choose optimal agglomerative methods such as SLINK for single-linkage and CLINK for complete-linkage clustering to reduce the complexity to $O(n^2)$. BIRCH, CURE, ROCK and Chameleon are some typical algorithms that applied under hierarchical-based clustering.
+For the agglomerative method, it starts in two or more clusters recursively merged as the most applicable cluster by moving up the hierarchy. However, for the divisive method, it starts in a single cluster and recursively split to find applicable cluster for the items by moving down the hierarchy \cite{dcar}. Although the time complexity for both approaches are huge ($O(n^2\log(n))$ for agglomerative and $O(2^n)$ for divisive) which makes them execute too slow during the big data sets, it is possible to choose optimal agglomerative methods such as SLINK for single-linkage and CLINK for complete-linkage clustering to reduce the complexity to $O(n^2)$. BIRCH, CURE, ROCK and Chameleon are some typical algorithms that applied under hierarchical-based clustering.
 
 \subsection{Density-based Clustering}
 
-Density-based clustering identifies distinctive clusters in the data based on the basic idea that a cluster in a data space is a contiguous region of high point density separated by regions of lower object density \cite{jsdbc} and defined as a maximal set of density connected points. It has the capability to learned clusters with arbitrary shape. Techniques such as DBSCAN, OPTICS, DBCLASD and DENCLUE are used to sifter out outliers and determine clusters of arbitrary shape \cite{dcar}.
+Density-based clustering identifies distinctive clusters in the data based on the basic idea that a cluster in a data space is a contiguous region of high point density separated by regions of lower object density \cite{jsdbc} and defined as a maximal set of density-connected points. It has the capability to learned clusters with arbitrary shape. Techniques such as DBSCAN, OPTICS, DBCLASD and DENCLUE are used to sifter out outliers and determine clusters of arbitrary shape \cite{dcar}.
 
 $\varepsilon-Neighborhood$, which means objects within a radius of $\varepsilon$ from an object, could define the density. It has the following form.
 \[N_{\varepsilon}(p):\{q \vert d(p,q)\leq \varepsilon\}\]
@@ -82,7 +82,7 @@ As the name of this clustering technique, it separates data objects in the data 
 \item[5] Traversal of neighbor cells.
 \end{itemize}
 
-Grid-based clustering has the similar time complexity to other clustering methods. However, it could significant reduce the statistical value calculation complexity even though for clustering very big data sets. Some typical examples of this clustering are the Wave-Cluster and STING \cite{dcar}.
+Grid-based clustering has the similar time complexity to other clustering methods. However, it could significantly reduce the statistical value calculation complexity even though for clustering very big data sets. Some typical examples of this clustering are the Wave-Cluster and STING \cite{dcar}.
 
 \subsection{Model-based Clustering}
 
@@ -90,7 +90,7 @@ Model-based clustering was developed based on probability models from the data. 
 
 \subsection{Comparison of Clustering Methods}
 
-As we have discussed some of the mainly used clustering methods, here we could assess them and sum up their advantages and disadvantages within the big data environment. Table 1 displays these information for each clustering type.
+As we have discussed some of the mainly used clustering methods, here we could assess them and sum up their advantages and disadvantages within the big data environment. Table 1 displays this information for each clustering type.
 \begin{table*}[htb]
 \centering
 \begin{tabular}{|p{0.21\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|} \hline
@@ -145,11 +145,11 @@ Model-based clustering & \begin{itemize}
 
 \section{Clustering Algorithms}
 
-Here in this section introduces two kinds of well-known and commonly used clustering algorithms: k-means algorithm which applied partitioning-based clustering and CLIQUE algorithm which applied grid-based clustering.
+Here in this section introduces two kinds of well-known and commonly used clustering algorithms: the k-means algorithm which applied partitioning-based clustering and CLIQUE algorithm which applied grid-based clustering.
 
 \subsection{K-Means Algorithm}
 
-K-means algorithm is a powerful method to exploring the structure in data set \cite{bdca}. It classifies the whole data set with $n$ instance into $k$ clusters and aims to find an optimal solution that minimizes the value of objective function. K-means uses centroid which is the average points to represent a cluster. And then in assignment step, it obtains the distance between data point and the centroid to find the nearest cluster for each point. After that, update centoids by recomputing them of each cluster. The procedure of k-means algorithm is simple which contains the following main steps:
+K-means algorithm is a powerful method to exploring the structure in a data set \cite{bdca}. It classifies the whole data set with $n$ instance into $k$ clusters and aims to find an optimal solution that minimizes the value of objective function. K-means uses centroid which is the average points to represent a cluster. And then in assignment step, it obtains the distance between the data point and the centroid to find the nearest cluster for each point. After that, update centroid by recomputing them of each cluster. The procedure of k-means algorithm is simple which contains the following main steps:
 \begin{itemize}
 \item[1] Randomly select $k$ points as initial centroids;
 \item[2] Calculate the distance between each data point and centroids;
@@ -157,11 +157,11 @@ K-means algorithm is a powerful method to exploring the structure in data set \c
 \item[4] Repeat the calculation on the centroid of each cluster until centroid does not change.
 \end{itemize}
 
-The time complexity of k-means algorithm is $O(nk)$ which could be extremely expensive when both $n$ and $k$ are large. However, there are several ways to overcome this problem such as reduce the cluster number in assignment step or quickly identify data points that often change the cluster. By implementing k-means algorithm through Map-Reduce framework, it will have the ability to handle big data \cite{bdca}.
+The time complexity of the k-means algorithm is $O(nk)$ which could be extremely expensive when both $n$ and $k$ are large. However, there are several ways to overcome this problem such as reduce the cluster number in assignment step or quickly identify data points that often change the cluster. By implementing k-means algorithm through the Map-Reduce framework, it will have the ability to handle big data \cite{bdca}.
 
 \subsection{CLIQUE}
 
-CLIQUE, also known as Clustering in QUEst, is used to find density regions from a sparse multi-dimensional data set \cite{bdca}. Each region could be identified as a cluster through properties like attribute values, points or ranges. Since CLIQUE algorithm has the ability to discover density units automatically, it is able to be applied in higher dimensional data sets which is one of its advantages compare to the other clustering algorithms. CLIQUE partitions m-dimensional data space into a rectangular unit without overlapping in order to get the dense units. And clusters are generated from the subspaces of original data spaces through the Apriori property \cite{bdca}. Assume there is a dense unit which is $k$ dimension, its projections are $(k-1)$ dimension. Thus, by using CLIQUE algorithm, we could obtain the minimum descriptions for its data points. CLIQUE algorithm contains the following main steps:
+CLIQUE, also known as Clustering in QUEst, is used to find density regions from a sparse multi-dimensional data set \cite{bdca}. Each region could be identified as a cluster through properties like attribute values, points or ranges. Since CLIQUE algorithm has the ability to discover density units automatically, it is able to be applied to higher dimensional data sets which are one of its advantages compared to the other clustering algorithms. CLIQUE partitions m-dimensional data space into a rectangular unit without overlapping in order to get the dense units. And clusters are generated from the subspaces of original data spaces through the Apriori property \cite{bdca}. Assume there is a dense unit which is $k$ dimension, its projections are $(k-1)$ dimension. Thus, by using CLIQUE algorithm, we could obtain the minimum descriptions for its data points. CLIQUE algorithm contains the following main steps:
 \begin{itemize}
 \item[1] Identify subspaces that contain clusters;
 \item[2] Identify clusters;
@@ -170,7 +170,7 @@ CLIQUE, also known as Clustering in QUEst, is used to find density regions from 
 
 \section{Conclusion}
 
-The aim of this paper is to demonstrate the different clustering algorithms used in big data which included partitioning-based clustering, hierarchical-based clustering, density-based clustering, grid-based clustering and model-based clustering, compare their merits and demerits, and extend the content with their applications. Each clustering method adopts a different idea and implementation procedures to processes the data set which characterized by different properties. Thus, for choosing a clustering algorithm, we need to consider about both data sets, time complexity and other constraint conditions. For introducing clustering applications, it gave two simple but widely used algorithm cases: k-means and CLIQUE algorithm. K-means is a kind of partitioning clustering which provides effective results on data sets with numeric attributes, but this could be affected by noise or outliers and its time complexity might be very large in big data set. CLIQUE is a kind of grid clustering, it can find dense regions from multi-dimentional data sets and appropriate to deal with large volume of data. However, it could only apply in numerical data set as well.
+The aim of this paper is to demonstrate the different clustering algorithms used in big data which included partitioning-based clustering, hierarchical-based clustering, density-based clustering, grid-based clustering and model-based clustering, compare their merits and demerits, and extend the content with their applications. Each clustering method adopts a different idea and implementation procedures to processes the data set which characterized by different properties. Thus, for choosing a clustering algorithm, we need to consider about both data sets, time complexity and other constraint conditions. For introducing clustering applications, it gave two simple but widely used algorithm cases: k-means and CLIQUE algorithm. K-means is a kind of partitioning clustering which provides effective results on data sets with numeric attributes, but this could be affected by noise or outliers and its time complexity might be very large in big data set. CLIQUE is a kind of grid clustering, it can find dense regions from multi-dimensional data sets and appropriate to deal with large volume of data. However, it could only apply to numerical data set as well.
 
 \begin{acks}
 
