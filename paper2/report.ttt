@@ -1,0 +1,53 @@
+\begin{table*}[htb]
+\centering
+\begin{tabular}{|p{0.21\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|} \hline
+\textsf{Clustering Type } & \textsf{Advantages} & \textsf{Disadvantages} \\ \hline
+Partitioning-based clustering & \begin{itemize}
+\item[1] Relaxed to appreciate and implement;
+\item[2] Produce additional thick cluster than the hierarchical technique especially when clusters are circular;
+\item[3] For large number of variables, k-means algorithm may faster than hierarchical clustering when $k$ is small;
+\item[4] Well-organized in processing large data sets.
+\end{itemize} & \begin{itemize}
+\item[1] Deprived at usage of noisy data and outliers;
+\item[2] Works only on numeric data;
+\item[3] Unfilled cluster generation problem;
+\item[4] Haphazard preliminary cluster center problem;
+\item[5] Not appropriate for non-spherical clusters;
+\item[6] User has to provide the value of $k$.
+\end{itemize} \\ \hline
+Hierarchical-based clustering & \begin{itemize}
+\item[1] More adaptable;
+\item[2] Less delicate to noise and outliers;
+\item[3] Any amount of clusters can be acquired by cutting the dendrogram at desired level. It allows diverse users to choose dissimilar panels according to the desired resemblance level;
+\item[4] Appropriate to any characteristic type.
+\end{itemize} & \begin{itemize}
+\item[1] If a process is performed, it cannot be undone;
+\item[2] Incompetence to scale well.
+\end{itemize} \\ \hline
+Density-based clustering & \begin{itemize}
+\item[1] Resilient to outliers;
+\item[2] Does not necessitate the amount of clusters;
+\item[3] Forms clusters of uninformed shapes;
+\item[4] Unresponsive to organization of data objects.
+\end{itemize} & \begin{itemize}
+\item[1] Inappropriate for high-dimensional data sets due to the expletive of dimensionality singularity;
+\item[2] Its quality be contingent upon the threshold set.
+\end{itemize} \\ \hline
+Grid-based clustering & \begin{itemize}
+\item[1] Fast handling time;
+\item[2] Self-governing of the amount of data objects.
+\end{itemize} & \begin{itemize}
+\item[1] Be contingent only on the amount of cells in each dimension in the quantized space.
+\end{itemize} \\ \hline
+Model-based clustering & \begin{itemize}
+\item[1] Vigorous to noisy data or outliers;
+\item[2] Fast handling speed;
+\item[3] It decides the amount of clusters to produce.
+\end{itemize} & \begin{itemize}
+\item[1] Multifarious in nature.
+\end{itemize} \\ \hline
+\end{tabular}
+\caption{Comparison between each clustering algorithm \cite{dcar}.}
+\end{table*}
+\efloatseparator
+ 
