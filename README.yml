@@ -25,7 +25,7 @@ paper2:
         types and analyze some highly used algorithms.
     author:
         - Han, Wenxuan
-    chapter: None
+    chapter: Machine Learning
     hid:
         - 209
     status: 100%
