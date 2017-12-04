@@ -35,14 +35,25 @@ paper2:
 project:
     review: Dec 4 2017
     author:
-        - Gregor von Laszewski
+        - Han, Wenxuan
+        - Liu, Yuchen
+        - Lu, Junjie
     hid:
-        - 000
-    title: null
+        - 209
+        - 213
+        - 214
+    title: Comparison between different classification algorithms in Digit Recognizer
     abstract: >
-        We showcase tis and that and the other
-        and another line.
-    url: https://github.com/bigdata-i523/sample-hid000/project/
+        Nowadays, Digit Recognizer is becoming more and more important in many 
+        different areas, such as zip code recognizer, banking receipt and balance 
+        sheet. Many technology companies are trying to use Big Data to develop 
+        more efficient and accurate algorithm for Digit Recognizer. This project 
+        uses Digit Recognizer dataset from Kaggle.com. There are more than 42000 samples 
+        in the Dataset. Different algorithms such as kth nearest neighbor (KNN), 
+        logistic regression and DNN (deep neural network) will be implemented on 
+        Digit Recognizer. The performance will be compared with the different size of 
+        data and different algorithm.
+    url: https://github.com/bigdata-i523/hid209/project/
     type: project
-    status: Dec 04 17 0%
-chapter: TBD
+    status: Dec 04 17 98%
+    chapter: Machine Learning
