@@ -32,3 +32,17 @@ paper2:
     title: Clustering Algorithms in Big Data Analysis
     type: latex
     url: https://github.com/bigdata-i523/hid209/paper2/paper2.pdf
+project:
+    review: Dec 4 2017
+    author:
+        - Gregor von Laszewski
+    hid:
+        - 000
+    title: null
+    abstract: >
+        We showcase tis and that and the other
+        and another line.
+    url: https://github.com/bigdata-i523/sample-hid000/project/
+    type: project
+    status: Dec 04 17 0%
+chapter: TBD
