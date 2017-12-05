@@ -1,3 +1,7 @@
+# Author: Yuchen Liu HID213, Wen Xuanhan HID209, Junjie Lu HID214
+# Data: 2017.12.01
+# Reference: http://blog.csdn.net/tinkle181129/article/details/55261251
+
 from datetime import datetime
 
 import matplotlib.pyplot as plt
