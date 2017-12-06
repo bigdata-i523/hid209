@@ -10,6 +10,9 @@
 * 10/20/17 Attended class meeting for residential students
 * 10/27/17 Attended class meeting for residential students
 * 11/03/17 Attended class meeting for residential students
+* 11/10/17 Attended class meeting for residential students
+* 11/17/17 Attended class meeting for residential students
+* 12/01/17 Attended class meeting for residential students
 
 # Logistic
 
