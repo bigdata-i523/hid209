@@ -104,8 +104,9 @@ In this paper, we choose the data of Digit Recognizer from Kaggle.com in order t
 \subsection{Data Set Description}
 
 In train.csv data file, it contains $42000$ gray-scale images of hand-drawn digits, from zero through nine. Each image is a $28 \times 28$ pixels matrix with a total of 784 pixels \cite{kaggle}. Each pixel has a single pixel-value which is an integer from 0 to 255 associated with it, indicating the lightness or darkness of that pixel (higher numbers meaning lighter). In this experiment, we have plotted the graph in order to see the appearance of these digits easily. Figure 1 shows the first 70 samples.
-\begin{figure}
-\includegraphics[width=0.35\columnwidth]{images/data_samples}
+\begin{figure}[!ht]
+\centering
+\includegraphics[]{images/data_samples}
 \caption{70 samples of hand-drawn digits in this data set.}
 \end{figure}
 
@@ -747,7 +748,7 @@ Logistic Regression received an average performance among the 5 algorithms. It a
 
 To conclude, we decide to use SVM classifier for Digit Recognition Task. We should definitely use feature extraction on the data because of the running time and over-fitting problem. The Binary Data cleaning method is optional. If we want to have higher accuracy, we should not use Binary Data cleaning. As a trade-off, if we want to have faster training speed, we should use Binary Data cleaning.
 
-\section{Future Improvement}
+\section{Limitations}
 
 Our analysis is far from perfect. There are several points that we want to point our as discussion and also opportunities for future improvement.
 \begin{enumerate}
