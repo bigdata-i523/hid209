@@ -1,6 +1,6 @@
 \documentclass[sigconf]{acmart}
 
-\input{format/i523}
+\input{format/final}
 
 \usepackage{listings}
 \usepackage{color}
@@ -22,7 +22,7 @@
   keywordstyle=\color{blue},
   commentstyle=\color{dkgreen},
   stringstyle=\color{mauve},
-  breaklines=true,
+%  breaklines=true,
   breakatwhitespace=true
   tabsize=3
 }
@@ -104,9 +104,10 @@ In this paper, we choose the data of Digit Recognizer from Kaggle.com in order t
 \subsection{Data Set Description}
 
 In train.csv data file, it contains $42000$ gray-scale images of hand-drawn digits, from zero through nine. Each image is a $28 \times 28$ pixels matrix with a total of 784 pixels \cite{kaggle}. Each pixel has a single pixel-value which is an integer from 0 to 255 associated with it, indicating the lightness or darkness of that pixel (higher numbers meaning lighter). In this experiment, we have plotted the graph in order to see the appearance of these digits easily. Figure 1 shows the first 70 samples.
+
 \begin{figure}[!ht]
 \centering
-\includegraphics[]{images/data_samples}
+\includegraphics[width=\columnwidth]{images/data_samples}
 \caption{70 samples of hand-drawn digits in this data set.}
 \end{figure}
 
@@ -133,7 +134,10 @@ As we mentioned above, it can be seen from both the figure and the pixel-value t
 
 Obviously, method (2) and (3) will cause the loss of the original information. However, this information may not as important as our expected during the execution of classification algorithms, it could play a positive role in increasing the performance without reducing the accuracy.
 
-In our experiment, we selected method (2) to clean the raw data. The following part of codes shows this operation.
+In our experiment, we selected method (2) to clean the raw
+data. Figure \ref{A:xyz} shows this operation.
+
+\begin{figure}[htb]
 \begin{lstlisting}
 from numpy import *
 
@@ -152,6 +156,8 @@ def data_clean(data):
     print("Data clean completed.")
     return new_data
 \end{lstlisting}
+\caption{Bla bla}\label{A:xyz}
+\end{figure}
 
 \subsection{Feature Extraction}
 
