@@ -1,5 +1,6 @@
 \documentclass[sigconf]{acmart}
 
+%\input{format/i523}
 \input{format/final}
 
 \usepackage{listings}
@@ -10,7 +11,7 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\lstset{frame=tb,
+\lstset{% frame=tb,
   language=Python,
   aboveskip=3mm,
   belowskip=3mm,
@@ -22,7 +23,7 @@
   keywordstyle=\color{blue},
   commentstyle=\color{dkgreen},
   stringstyle=\color{mauve},
-%  breaklines=true,
+  breaklines=true,
   breakatwhitespace=true
   tabsize=3
 }
@@ -34,7 +35,7 @@
 \def\bQ{\mathbb{Q}}
 
 \begin{document}
-\title{Comparison between different classification algorithms in Digit Recognizer}
+\title{Analysis of Digit Recognizer classification algorithms in big data}
 
 
 \author{Junjie Lu}
@@ -97,6 +98,15 @@ People have made a great improvement in digital recognition in recent years. And
 
 Fortunately, people have already developed many different types of techniques to avoid faults and decrease running time in recent few years. Several algorithms will be mentioned here. Logistic regression, the most frequently used algorithm in the field of machine learning, also has a good performance in digital recognition. Decision tree is commonly used in decision analysis. It can identify strategies to get a result, in this case, it can also play an important role in digital recognition. Naive Bayes classifier would also be used. Random forest is also a widely used technique in the field of classification and regression. Its special structure with the multitude of decision trees would help it get a fantastic result. Support vector machine can efficiently perform non-linear classification hence it also be considered frequently. These algorithms have different structures so that they have different performance. We can also observe running time and accuracy of different algorithms with different kind of data. In this paper, we are going to talk about this and make the comparison between algorithms in accuracy and efficiency.
 
+\section{Digit Recognition Application in Big Data}
+Digit recognition have many applications in our daily life. More and more organizations start using Digit recognition technique to save cost and increase accuracy in large-scale data entry jobs.
+
+First, Digit recognition can be used in large scale statistic. For example, it can be used in industry annual inspection and population census\cite{app1}. The United States Census Bureau will lead a population census every year in United States, the data volume is huge. A large amount of data needs to be input. In the past, all the data  need to input into the database manually. This process required large amount labor force and human resources. In recent years, more and more companies and countries start to use OCR and Digit recognition technique for these jobs. Because the dataset from these applications are centrally organized. Usually, we can build forms automatically and impose restrictions on writing to facilitate automatic Digit Recognition. At present, most of these applications required user to fill in the assigned boxed according to specific requirements. Also, in order to check the accuracy of the recognition, these systems tend to use a user interface to make a comprehensive examination of the recognition results\cite{app2}. Currently, more and more advanced algorithms are used in Digit recognition.
+
+Second, Digit recognizer has a widely used in finance and tax administration. As the development of the economy in the world, there are more and more reports, forms, checks and bills waiting to be dealt. The person may deal with these in a comparable lower efficient. It is fantastic for the appearance of digit recognizer to work with these\cite{second}. It has a higher efficiency and longer working hours. And machines do not need the salary. It is more difficult in recognize checks and forms because of higher demand for accuracy. In the meanwhile, there may be several kinds of forms. Recognizer should have the capability to deal with them all. Furthermore, recognizer has to face millions of handwriting some of them are hard to recognize\cite{99}.
+
+Third, this technology is also popularly applied in mail sorting. With the improvement of people's living standards, the development of economic activities, the demand for communication causes a substantial increase in the exchange of letters. For example, the post offices in metropolitan areas of China have already reached to a few million pieces per day in 2000. This sharp rise in business volume has made the sorting of mail pieces automated and becoming the trend of the times. In the automatic sorting of mail, handwritten digit recognition (OCR) often combined with optical bar code recognition (OBR) and artificial identification to complete the postal code reading. Currently, the most common used OVCS sorter has the performance with $30\%$ OCR rejection rate and $1.1\%$ OCR sorting error rate \cite{hdwc}.
+
 \section{Experiment Preparation}
 
 In this paper, we choose the data of Digit Recognizer from Kaggle.com in order to test different classification algorithms \cite{kaggle}. The goal of this experiment is to correctly identify digits from a data set of tens of thousands of handwritten images. Thus, we could compare the pros and cons of each technique through the recognition accuracy and time-consuming.
@@ -104,11 +114,10 @@ In this paper, we choose the data of Digit Recognizer from Kaggle.com in order t
 \subsection{Data Set Description}
 
 In train.csv data file, it contains $42000$ gray-scale images of hand-drawn digits, from zero through nine. Each image is a $28 \times 28$ pixels matrix with a total of 784 pixels \cite{kaggle}. Each pixel has a single pixel-value which is an integer from 0 to 255 associated with it, indicating the lightness or darkness of that pixel (higher numbers meaning lighter). In this experiment, we have plotted the graph in order to see the appearance of these digits easily. Figure 1 shows the first 70 samples.
-
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{images/data_samples}
-\caption{70 samples of hand-drawn digits in this data set.}
+\caption{70 samples of hand-drawn digits in this data set}
 \end{figure}
 
 The training data set has 785 columns. The first column called ``label'', is the digit that was drawn by the user. The rest of the columns contain the pixel-values of the associated image. Each pixel column in the training set has a name like $pixelx$, where $x$ is an integer between 0 and 783. To locate a pixel on the image, suppose that we have decomposed $x$ as $x=i*28+j$, where $i$ and $j$ are integers between 0 and 27. Then $pixelx$ is located in row $i$ and column $j$ of this matrix \cite{kaggle}. Visually, if we omit the ``pixel'' prefix, the pixels make up the image like the following form:
@@ -134,10 +143,10 @@ As we mentioned above, it can be seen from both the figure and the pixel-value t
 
 Obviously, method (2) and (3) will cause the loss of the original information. However, this information may not as important as our expected during the execution of classification algorithms, it could play a positive role in increasing the performance without reducing the accuracy.
 
-In our experiment, we selected method (2) to clean the raw
-data. Figure \ref{A:xyz} shows this operation.
+In our experiment, we selected method (2) to clean the raw data. The main codes in Figure \ref{fig:data clean} shows this operation.
 
 \begin{figure}[htb]
+\centering
 \begin{lstlisting}
 from numpy import *
 
@@ -156,7 +165,7 @@ def data_clean(data):
     print("Data clean completed.")
     return new_data
 \end{lstlisting}
-\caption{Bla bla}\label{A:xyz}
+\caption{The core codes about data clean}\label{fig:data clean}
 \end{figure}
 
 \subsection{Feature Extraction}
@@ -173,6 +182,8 @@ A common understanding is that if all the points are mapped together, almost all
 
 One of the questions we faced while we are using PCA is that: how many components should we choose for the model after dimension reduction. In order to solve this problem, we use Explained Variance as our threshold standard. Explained Variance is an important indicator of PCA dimension reduction. The Explained Variance shows the amount of variance explained by each of the selected components. The first column of the PCA model always explains the most variance and the variance explained will keep decrease as the number of column increase. Generally, a dimension with a cumulative contribution rate of about 90\% is selected as a reference dimension for PCA dimensionality reduction. In this project, in order to get a more accurate result, we choose 95\% as our threshold.
 
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 from sklearn.decomposition import PCA
 
@@ -196,6 +207,8 @@ def feature_selection(data):
     pca = PCA(n_components=n, whiten=True)
     return pca.fit_transform(data)
 \end{lstlisting}
+\caption{The core codes about PCA processing}\label{fig:pca process}
+\end{figure}
 
 After calculating the explained variance for each component, we decide to choose 30 components for our model. Which shows that there will be 30 features in our model.
 
@@ -240,6 +253,8 @@ In this project, we use K-fold cross validation technique to reduce over-fitting
 
 After we receive the result for each validation, we generate the mean of each result and use the result as the accuracy of the model.
 
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 from datetime import datetime
 from sklearn.cross_validation import cross_val_score
@@ -253,6 +268,8 @@ def model_acc(data, label, model):
     print("Time use: ", time_use)
     print("Accuracy by cross validation: ", acc)
 \end{lstlisting}
+\caption{The core codes about cross-validation}\label{fig:cv}
+\end{figure}
 
 \subsection{Decision Tree}
 
@@ -290,7 +307,10 @@ Where $p_{k}$ denotes the probability of observation points which belong to clas
 
 The second key idea in the CART process is to prune the trees of the training set with independent validation data sets. Analyzing the recursive tree construction of classification and regression tree, it is easy to find that there exists a data over-fitting problem \cite{cart}. In the construction of decision tree, many branches reflect the abnormality in training data due to the noises or outliers inside. Using such decision tree to classify the data with unknown categories, the accuracy of classification is not high. So it is essential to detect and subtract these branches. Generally, tree pruning method uses statistical metrics, subtract the least reliable branches, which results in faster classification and improves the ability to separate correctly from the training data. The CART algorithm often adopts the post-pruning method, which is implemented by pruning the branches in a fully grown tree. By deleting the branch of the node to cut tree nodes, the bottom non-pruned node becomes a leaf.
 
-The following part of codes shows how we called CART algorithm in our experiment.
+The main codes of Figure \ref{fig:dt} shows how we called CART algorithm in our experiment.
+
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 # Import Library
 from sklearn import tree
@@ -303,6 +323,8 @@ def dt_classifier(data, label, data_type):
     # Train the model using the training sets and check score
     model_acc(data, label, dt_model)
 \end{lstlisting}
+\caption{The core codes about CART algorithm (decision tree)}\label{fig:dt}
+\end{figure}
 
 \subsubsection{Advantage and Disadvantage}
 
@@ -383,7 +405,10 @@ The whole Naive Bayes classification could be divided into three stages:
     \item Application stage. The task of this stage is to classify items using classifier. The input is classifier and items, and the output is the mapping between items and categories. This stage could also be completed by a program.
 \end{enumerate}
 
-The following part of codes shows how we called Naive Bayes algorithm in our experiment.
+The main codes of Figure \ref{fig:nb} shows how we called Naive Bayes algorithm in our experiment.
+
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 # Import Library
 from sklearn.naive_bayes import GaussianNB
@@ -396,6 +421,8 @@ def nb_classifier(data, label, data_type):
     # Train the model using the training sets and check score
     model_acc(data, label, nb_model)
 \end{lstlisting}
+\caption{The core codes about Naive Bayes}\label{fig:nb}
+\end{figure}
 
 \subsubsection{Advantage and Disadvantage}
 Naive Bayes has advantages as follow \cite{NB}:
@@ -464,7 +491,10 @@ It still has other options:
     \item Categorical: Identify variables in the category.
 \end{enumerate}
 
-The following part of codes shows how we called Logistic Regression algorithm in our experiment.
+The main codes of Figure \ref{fig:lr} shows how we called Logistic Regression algorithm in our experiment.
+
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 # Import Library
 from sklearn.linear_model import LogisticRegression
@@ -477,6 +507,8 @@ def lr_classifier(data, label, data_type):
     # Train the model using the training sets and check score
     model_acc(data, label, lr_model)
 \end{lstlisting}
+\caption{The core codes about Logistic Regression}\label{fig:lr}
+\end{figure}
 
 \subsubsection{Advantage and Disadvantage}
 
@@ -553,7 +585,10 @@ In order to implement random forest, we should follow these steps:
     \item Constitute the random forest with these decision trees. Use random forest to determine and classify the new data, and the results are based on votes amount of the tree classifier.
 \end{enumerate}
 
-The following part of codes shows how we called Random Forest algorithm in our experiment.
+The main codes of Figure \ref{fig:rf} shows how we called Random Forest algorithm in our experiment.
+
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 # Import Library
 from sklearn.ensemble import RandomForestClassifier
@@ -566,6 +601,8 @@ def rf_classifier(data, label, flag):
     # Train the model using the training sets and check score
     model_acc(data, label, rf_model)
 \end{lstlisting}
+\caption{The core codes about Random Forest}\label{fig:rf}
+\end{figure}
 
 \subsubsection{Advantage and Disadvantage}
 
@@ -629,8 +666,10 @@ $x$ is the training sample who is the most closest to hyperplane. It is known as
     & minL(\beta)=\frac{1}{2}||\beta||^2 \text{ subject to } y_i(\beta^T+ \beta_0)>=1, \forall{i}
 \end{align*}
 
-In Python, scikit-learn is a widely used library for implementing machine learning algorithms, SVM is also available in the scikit-learn library and follows the same structure (Import library, object creation, fitting model and prediction). Let's look at the below code \cite{svm.code}:
+In Python, scikit-learn is a widely used library for implementing machine learning algorithms, SVM is also available in the scikit-learn library and follows the same structure (Import library, object creation, fitting model and prediction). Let's look at the below Python code \cite{svm.code} in Figure \ref{fig:svm_p}:
 
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 # Import Library
 from sklearn import svm
@@ -648,8 +687,13 @@ model.score(X, y)
 # Predict Output
 predicted= model.predict(x_test)
 \end{lstlisting}
+\caption{The core codes about SVM in Python}\label{fig:svm_p}
+\end{figure}
 
-The e1071 package in R is used to create Support Vector Machines with ease. It has helper functions as well as code for the Naive Bayes Classifier. The creation of a support vector machine in R and Python follow similar approaches, let's take a look now at the following code \cite{svm.code}:
+The e1071 package in R is used to create Support Vector Machines with ease. It has helper functions as well as code for the Naive Bayes Classifier. The creation of a support vector machine in R and Python follow similar approaches, let's take a look now at the following R code \cite{svm.code} in Figure \ref{fig:svm_r}:
+
+\begin{figure}[htb]
+\centering
 \begin{lstlisting}
 # Import Library
 require(e1071) #Contains the SVM
@@ -667,6 +711,8 @@ kernel='linear',gamma=0.2,cost=100)
 preds <- predict(model,Test)
 table(preds)
 \end{lstlisting}
+\caption{The core codes about SVM in R}\label{fig:svm_r}
+\end{figure}
 
 \subsubsection{Advantage and Disadvantage}
 
@@ -778,7 +824,7 @@ The authors would like to thank Professor Gregor von Laszewski and all TAs for p
 \appendix
 \section{Code Attachment}
 \begin{lstlisting}
-##Author: Yuchen Liu HID213, Wenxuan Han HID209, Junjie Lu HID214
+##Author: Yuchen Liu HID213, Wen Xuanhan HID209, Junjie Lu HID214
 ##Data: 2017.12.01
 ##Reference: http://blog.csdn.net/tinkle181129/article/details/55261251
 
