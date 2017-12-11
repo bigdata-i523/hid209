@@ -42,7 +42,7 @@ project:
         - 209
         - 213
         - 214
-    title: Comparison between different classification algorithms in Digit Recognizer
+    title: Analysis of Digit Recognizer classification algorithms in big data
     abstract: >
         Nowadays, Digit Recognizer is becoming more and more important in many 
         different areas, such as zip code recognizer, banking receipt and balance 

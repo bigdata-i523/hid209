@@ -1,4 +1,4 @@
-Title: Comparison between different classification algorithms in Digit Recognizer
+Title: Analysis of Digit Recognizer classification algorithms in big data
 
 Author: Wenxuan Han
 
