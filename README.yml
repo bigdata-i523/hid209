@@ -15,7 +15,6 @@ paper1:
         - 209
     status: Oct 29 2017 100%
     title: Big Data Application in Web Search and Text Mining
-    type: latex
     url: https://github.com/bigdata-i523/hid209/paper1/paper1.pdf
 paper2:
     review: Nov 6 2017
@@ -30,7 +29,6 @@ paper2:
         - 209
     status: 100%
     title: Clustering Algorithms in Big Data Analysis
-    type: latex
     url: https://github.com/bigdata-i523/hid209/paper2/paper2.pdf
 project:
     review: Dec 4 2017
